@@ -1,8 +1,15 @@
 :root {
-    
+    --clr-primary-400: hsl(280, 55%, 44%);
+
+    --clr-neutral-100: hsl(300, 100%, 99%);
+    --clr-neutral-900: hsl(240, 9%, 13%);
+
+    --clr-accent: ;
 }
 
 /* START OF RESET */
+/* Reset essentially provides a consistent 'square one' to start from 
+regardless of user browser */
 /* https://piccalil.li/blog/a-modern-css-reset */
 
 /* Box sizing rules */
@@ -72,3 +79,25 @@ svg {
   }
 }
 /* END OF RESET */
+
+body{
+    max-width: 100%;
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-neutral-100);
+}
+
+.primary-header{
+    background-color: var(--clr-neutral-900);
+}
+
+main section:nth-of-type(1){
+    background-color: var(--clr-primary-400);
+}
+
+main section:nth-of-type(2){
+    background-color: var(--clr-neutral-100);
+}
+
+footer{
+    background-color: var(--clr-neutral-900);
+}
