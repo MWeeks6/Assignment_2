@@ -1,10 +1,10 @@
 :root {
-    --clr-primary-400: hsl(280, 55%, 44%);
+  --clr-primary-400: hsl(280, 55%, 44%);
 
-    --clr-neutral-100: hsl(300, 100%, 99%);
-    --clr-neutral-900: hsl(240, 9%, 13%);
+  --clr-neutral-100: hsl(300, 100%, 99%);
+  --clr-neutral-900: hsl(240, 9%, 13%);
 
-    --clr-accent: ;
+  --clr-accent: ;
 }
 
 /* START OF RESET */
@@ -80,24 +80,105 @@ svg {
 }
 /* END OF RESET */
 
-body{
-    max-width: 100%;
-    background-color: var(--clr-neutral-100);
-    color: var(--clr-neutral-100);
+body {
+  max-width: 100%;
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-neutral-100);
 }
 
-.primary-header{
-    background-color: var(--clr-neutral-900);
+.primary-header {
+  background-color: var(--clr-neutral-900);
 }
 
-main section:nth-of-type(1){
-    background-color: var(--clr-primary-400);
+main section:nth-of-type(1) {
+  background-color: var(--clr-primary-400);
 }
 
-main section:nth-of-type(2){
-    background-color: var(--clr-neutral-100);
+main section:nth-of-type(2) {
+  background-color: var(--clr-neutral-100);
 }
 
-footer{
-    background-color: var(--clr-neutral-900);
+footer {
+  background-color: var(--clr-neutral-900);
+}
+
+.header-container,
+.album,
+.card-holder,
+.footer-container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em;
+}
+
+.album {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5em 8em 5em;
+}
+
+.album .album-title {
+  font-size: 2.5rem;
+}
+
+.album .album-content {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-right: 5em;
+  margin-left: 5em;
+  margin-bottom: 1.25em;
+}
+
+.album .album-buttons {
+  font-size: 1rem;
+}
+
+.card-holder {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 2em;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.card {
+  min-width: 33%;
+  border: 2px solid black;
+  color: var(--clr-neutral-900);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.card .image-container > img {
+  width: 100%;
+  height: 225px;
+  object-fit: fill;
+}
+
+.card-content-container {
+  padding: 1.25em;
+}
+
+.card-features {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.1em;
+  padding-bottom: 1.1em;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3em;
+  padding-bottom: 3em;
 }
