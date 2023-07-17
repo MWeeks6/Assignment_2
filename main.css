@@ -1,10 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 :root {
   --clr-primary-400: hsl(280, 55%, 44%);
 
   --clr-neutral-100: hsl(300, 100%, 99%);
   --clr-neutral-900: hsl(240, 9%, 13%);
 
-  --clr-accent: ;
+  --clr-accent-400: hsl(25 100% 66%);
+  --clr-accent-700: hsl(16 82% 65%);
+
+  --ff-poppins: "Poppins", sans-serif;
 }
 
 /* START OF RESET */
@@ -84,10 +89,17 @@ body {
   max-width: 100%;
   background-color: var(--clr-neutral-100);
   color: var(--clr-neutral-100);
+  font-family: var(--ff-poppins);
 }
 
 .primary-header {
   background-color: var(--clr-neutral-900);
+}
+
+a {
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--clr-neutral-100);
 }
 
 main section:nth-of-type(1) {
@@ -140,6 +152,19 @@ footer {
   font-size: 1rem;
 }
 
+.album .album-buttons a {
+  padding: 0.75em 1.25em 0.75em;
+  margin: 0.25em;
+  color: var(--clr-neutral-900);
+}
+
+.album .album-buttons a:nth-child(1) {
+  background-color: var(--clr-accent-400);
+}
+.album .album-buttons a:nth-child(2) {
+  background-color: var(--clr-accent-700);
+}
+
 .card-holder {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -151,8 +176,6 @@ footer {
 
 .card {
   min-width: 33%;
-  border: 2px solid black;
-  color: var(--clr-neutral-900);
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -166,13 +189,20 @@ footer {
 
 .card-content-container {
   padding: 1.25em;
+  background-color: var(--clr-primary-400);
 }
 
 .card-features {
   display: flex;
   justify-content: space-between;
-  padding-top: 1.1em;
+  padding-top: 1.5em;
   padding-bottom: 1.1em;
+}
+
+.card-features .card-buttons a {
+  padding: 0.5em;
+  background-color: var(--clr-accent-400);
+  color: var(--clr-neutral-900);
 }
 
 .footer-container {
