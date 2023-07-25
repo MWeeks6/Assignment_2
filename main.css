@@ -2,14 +2,55 @@
 
 /* variables */
 :root {
-  --clr-primary-400: hsl(280, 55%, 44%);
+  /* primary color */
+  --clr-primary-400: hsl(
+    var(--clr-primary-400-h),
+    var(--clr-primary-400-s),
+    var(--clr-primary-400-l)
+  );
+  --clr-primary-400-h: 280;
+  --clr-primary-400-s: 55%;
+  --clr-primary-400-l: 44%;
 
-  --clr-neutral-100: hsl(300, 100%, 99%);
-  --clr-neutral-900: hsl(240, 9%, 13%);
+  /* neutral colors */
+  --clr-neutral-100: hsl(
+    var(--clr-neutral-100-h),
+    var(--clr-neutral-100-s),
+    var(--clr-neutral-100-l)
+  );
+  --clr-neutral-100-h: 300;
+  --clr-neutral-100-s: 100%;
+  --clr-neutral-100-l: 99%;
 
-  --clr-accent-400: hsl(25 100% 66%);
-  --clr-accent-700: hsl(16 82% 65%);
+  --clr-neutral-900: hsl(
+    var(--clr-neutral-900-h),
+    var(--clr-neutral-900-s),
+    var(--clr-neutral-900-l)
+  );
+  --clr-neutral-900-h: 240;
+  --clr-neutral-900-s: 9%;
+  --clr-neutral-900-l: 13%;
 
+  /* accent colors */
+  --clr-accent-400: hsl(
+    var(--clr-accent-400-h),
+    var(--clr-accent-400-s),
+    var(--clr-accent-400-l)
+  );
+  --clr-accent-400-h: 25;
+  --clr-accent-400-s: 100%;
+  --clr-accent-400-l: 66%;
+
+  --clr-accent-700: hsl(
+    var(--clr-accent-700-h),
+    var(--clr-accent-700-s),
+    var(--clr-accent-700-l)
+  );
+  --clr-accent-700-h: 16;
+  --clr-accent-700-s: 82%;
+  --clr-accent-700-l: 65%;
+
+  /* font family */
   --ff-poppins: "Poppins", sans-serif;
 }
 
@@ -103,6 +144,10 @@ a {
   color: var(--clr-neutral-100);
 }
 
+a:hover {
+  filter: brightness(90%);
+}
+
 main section:nth-of-type(1) {
   background-color: var(--clr-primary-400);
 }
@@ -132,6 +177,14 @@ footer {
 
 .header-container a {
   color: var(--clr-accent-400);
+}
+
+/* this specific part was done using a css filter generator 
+   found on codepen.io/sosuke/pen/Pjoqqp */
+/* this allows me to alter the colour of the SVG 'logo' */
+.header-container a > img {
+  filter: invert(82%) sepia(51%) saturate(3307%) hue-rotate(321deg)
+    brightness(103%) contrast(104%);
 }
 
 .album {
@@ -180,7 +233,7 @@ footer {
 }
 
 .card {
-  min-width: 33%;
+  min-inline-size: min-content;
   display: flex;
   flex-direction: column;
   text-align: center;
